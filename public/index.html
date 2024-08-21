@@ -6,5 +6,51 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar -->
+    <nav class="bg-blue-600 p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="text-white text-xl font-bold">Fitness Tracker</a>
+
+        <div class="lg:hidden">
+          <button id="nav-toggle" class="text-white focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Nav Links -->
+        <div id="nav-menu" class="hidden lg:flex lg:items-center">
+          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
+            >Home</a
+          >
+          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
+            >Workouts</a
+          >
+          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
+            >Diet Plans</a
+          >
+          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
+            >Progress</a
+          >
+          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
+            >Community</a
+          >
+        </div>
+      </div>
+    </nav>
+  </body>
 </html>
