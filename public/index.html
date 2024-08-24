@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fitness Tracker</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="bg-gray-100">
     <!-- Navbar -->
     <nav class="bg-gray-800 p-4">
       <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
-        <a href="#" class="text-white text-xl font-bold">Fitness Tracker</a>
+        <a href="dashboard.html" class="text-white text-xl font-bold"
+          >Fitness Tracker</a
+        >
 
         <div class="lg:hidden">
           <button id="nav-toggle" class="text-white focus:outline-none">
@@ -34,7 +36,9 @@
 
         <!-- Nav Links -->
         <div id="nav-menu" class="hidden lg:flex lg:items-center">
-          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
+          <a
+            href="dashboard.html"
+            class="text-white px-4 py-2 hover:bg-blue-500 rounded"
             >Home</a
           >
           <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
@@ -51,9 +55,12 @@
           >
         </div>
         <div class="flex items-center space-x-4">
-          <a href="#" class="text-gray-700 hover:text-gray-900">Sign In</a>
+          <!-- Show Sign In/Sign Out or User Profile -->
+          <a href="login.html" class="text-gray-700 hover:text-gray-900"
+            >Sign In</a
+          >
           <a
-            href="#"
+            href="signup.html"
             class="bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600"
             >Sign Up</a
           >
@@ -68,169 +75,35 @@
         </div>
       </div>
     </nav>
-    <!-- Main Container -->
-    <div class="min-h-screen flex">
-      <!-- Sidebar Menu -->
-      <aside class="w-64 bg-gray-800 text-white">
-        <div class="p-6">
-          <h2 class="text-2xl font-bold mb-4">Profile Menu</h2>
-          <nav class="space-y-4">
-            <a
-              href="#profile-management"
-              class="block py-2 px-4 rounded hover:bg-gray-700"
-              >Profile Management</a
-            >
-            <a
-              href="#progress-dashboard"
-              class="block py-2 px-4 rounded hover:bg-gray-700"
-              >Progress Dashboard</a
-            >
-            <a
-              href="#settings"
-              class="block py-2 px-4 rounded hover:bg-gray-700"
-              >Settings</a
-            >
-            <a href="#logout" class="block py-2 px-4 rounded hover:bg-red-600"
-              >Logout</a
-            >
-          </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-900 py-16">
+      <div class="container mx-auto flex flex-col lg:flex-row items-center">
+        <!-- Text Content -->
+        <div class="lg:w-1/2 mb-8 lg:mb-0">
+          <h1 class="text-4xl font-bold text-gray-300">
+            Track, Plan, and Connect:
+          </h1>
+          <p class="mt-4 text-gray-100 text-lg">
+            Efficiently log workouts, plan meals, track progress, and connect
+            with a community that shares your passion for wellness.
+          </p>
+          <a
+            href="login.html"
+            class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600"
+          >
+            Start Today
+          </a>
         </div>
-      </aside>
-
-      <!-- Main Content Area -->
-      <main class="flex-1 p-8">
-        <!-- Profile Management Section -->
-        <section id="profile-management" class="mb-10">
-          <h2 class="text-3xl font-bold text-gray-800 mb-6">
-            Profile Management
-          </h2>
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <form action="/profile" method="POST" class="space-y-6">
-              <div class="grid grid-cols-2 gap-6">
-                <div>
-                  <label for="age" class="block text-gray-600">Age</label>
-                  <input
-                    type="number"
-                    id="age"
-                    name="age"
-                    required
-                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400"
-                  />
-                </div>
-                <div>
-                  <label for="weight" class="block text-gray-600"
-                    >Weight (kg)</label
-                  >
-                  <input
-                    type="number"
-                    id="weight"
-                    name="weight"
-                    required
-                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400"
-                  />
-                </div>
-                <div>
-                  <label for="height" class="block text-gray-600"
-                    >Height (cm)</label
-                  >
-                  <input
-                    type="number"
-                    id="height"
-                    name="height"
-                    required
-                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400"
-                  />
-                </div>
-                <div>
-                  <label for="activity" class="block text-gray-600"
-                    >Activity Level</label
-                  >
-                  <select
-                    id="activity"
-                    name="activity"
-                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400"
-                  >
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                  </select>
-                </div>
-              </div>
-              <div>
-                <label for="goals" class="block text-gray-600"
-                  >Fitness Goals</label
-                >
-                <textarea
-                  id="goals"
-                  name="goals"
-                  rows="4"
-                  class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400"
-                ></textarea>
-              </div>
-              <div>
-                <label for="diet" class="block text-gray-600"
-                  >Dietary Preferences</label
-                >
-                <textarea
-                  id="diet"
-                  name="diet"
-                  rows="4"
-                  class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-400"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="w-full bg-gray-800 text-white py-2 rounded-md bg-gray-900"
-              >
-                Save Profile
-              </button>
-            </form>
-          </div>
-        </section>
-
-        <!-- Progress Dashboard Section -->
-        <section id="progress-dashboard" class="mb-10">
-          <h2 class="text-3xl font-bold text-gray-800 mb-6">
-            Progress Dashboard
-          </h2>
-          <div class="grid grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow">
-              <h3 class="text-lg font-semibold text-gray-700">
-                Overall Progress
-              </h3>
-              <p class="text-4xl font-bold bg-gray-800 mt-4"></p>
-              <p class="text-gray-600"></p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow">
-              <h3 class="text-lg font-semibold text-gray-700">
-                Recent Activities
-              </h3>
-              <ul class="mt-4 space-y-2">
-                <li class="text-gray-600"></li>
-                <li class="text-gray-600"></li>
-                <li class="text-gray-600"></li>
-              </ul>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow">
-              <h3 class="text-lg font-semibold text-gray-700">
-                Upcoming Goals
-              </h3>
-              <ul class="mt-4 space-y-2">
-                <li class="text-gray-600"></li>
-                <li class="text-gray-600"></li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <!-- Settings Section -->
-        <section id="settings" class="mb-10">
-          <h2 class="text-3xl font-bold text-gray-800 mb-6">Settings</h2>
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <p class="text-gray-600">Settings content goes here...</p>
-          </div>
-        </section>
-      </main>
-    </div>
+        <!-- Image -->
+        <div class="lg:w-1/2">
+          <img
+            src="images/n.jpg"
+            alt="Fitness Image"
+            class="w-full h-96 object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
