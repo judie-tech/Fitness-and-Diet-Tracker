@@ -6,230 +6,270 @@
     <title>Fitness Tracker</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav class="bg-gray-800 p-4">
-      <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo -->
-        <a href="dashboard.html" class="text-white text-xl font-bold"
-          >Fitness Tracker</a
-        >
+  <body class="bg-gray-100 flex">
+    <!-- Sidebar -->
+    <div
+      class="min-h-screen bg-gray-800 text-white w-64 space-y-6 py-7 px-2 flex flex-col justify-between"
+    >
+      <div>
+        <!-- Logo or Title -->
+        <div class="text-2xl font-bold text-center">FitTrack</div>
 
-        <div class="lg:hidden">
-          <button id="nav-toggle" class="text-white focus:outline-none">
+        <!-- Navigation -->
+        <nav class="mt-10 space-y-2">
+          <a
+            href="#"
+            class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
+          >
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              class="w-6 h-6"
               fill="none"
-              viewBox="0 0 24 24"
               stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
+                d="M3 7l9 6 9-6-9-6-9 6z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 17l9 6 9-6m-18-6l9 6 9-6"
+              ></path>
             </svg>
-          </button>
-        </div>
-
-        <!-- Nav Links -->
-        <div id="nav-menu" class="hidden lg:flex lg:items-center">
-          <a
-            href="dashboard.html"
-            class="text-white px-4 py-2 hover:bg-blue-500 rounded"
-            >Home</a
-          >
-          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
-            >Workouts</a
-          >
-          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
-            >Diet Plans</a
-          >
-          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
-            >Progress</a
-          >
-          <a href="#" class="text-white px-4 py-2 hover:bg-blue-500 rounded"
-            >Community</a
-          >
-        </div>
-        <div class="flex items-center space-x-4">
-          <!-- Show Sign In/Sign Out or User Profile -->
-          <a href="login.html" class="text-gray-700 hover:text-gray-900"
-            >Sign In</a
-          >
-          <a
-            href="signup.html"
-            class="bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600"
-            >Sign Up</a
-          >
-          <div class="relative">
-            <img
-              src="https://via.placeholder.com/40"
-              alt="Profile"
-              class="w-10 h-10 rounded-full"
-            />
-            <!-- Dropdown or more options can be added here -->
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="bg-gray-900 py-16">
-      <div class="container mx-auto flex flex-col lg:flex-row items-center">
-        <!-- Text Content -->
-        <div class="lg:w-1/2 mb-8 lg:mb-0">
-          <h1 class="text-4xl font-bold text-gray-300">
-            Track, Plan, and Connect:
-          </h1>
-          <p class="mt-4 text-gray-100 text-lg">
-            Efficiently log workouts, plan meals, track progress, and connect
-            with a community that shares your passion for wellness.
-          </p>
-          <a
-            href="login.html"
-            class="mt-6 inline-block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600"
-          >
-            Start Today
+            <span class="ml-4 mb-4">Dashboard</span>
           </a>
-        </div>
-        <!-- Image -->
-        <div class="lg:w-1/2">
-          <img
-            src="images/n.jpg"
-            alt="Fitness Image"
-            class="w-full h-96 object-cover rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
-    </section>
-    <!-- Main Content Section for Workouts -->
-    <section class="bg-gray-900">
-      <div class="container bg-gray-900 mx-auto py-16">
-        <h2 class="text-3xl text-center font-bold text-gray-300 mb-8">
-          Workout Logging and Suggestions
-        </h2>
-
-        <!-- Workout Log -->
-        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-          <h3 class="text-2xl font-semibold text-gray-700 mb-4">Workout Log</h3>
-          <form>
-            <div class="mb-4">
-              <label class="block text-gray-600">Workout Type</label>
-              <select class="w-full p-2 border rounded-lg">
-                <option value="cardio">Cardio</option>
-                <option value="strength">Strength Training</option>
-                <option value="yoga">Yoga</option>
-              </select>
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-600">Duration (minutes)</label>
-              <input type="number" class="w-full p-2 border rounded-lg" />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-600">Intensity</label>
-              <select class="w-full p-2 border rounded-lg">
-                <option value="low">Low</option>
-                <option value="moderate">Moderate</option>
-                <option value="high">High</option>
-              </select>
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-600">Notes</label>
-              <textarea class="w-full p-2 border rounded-lg"></textarea>
-            </div>
-            <button
-              class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+          <a
+            href="#"
+            class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Log Workout
-            </button>
-          </form>
-        </div>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5.121 17.804A5 5 0 1116.879 6.196M15 11a4 4 0 100 8 4 4 0 000-8z"
+              ></path>
+            </svg>
+            <span class="ml-4 mb-4">Profile</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 6h8M8 12h8m-6 6h6"
+              ></path>
+            </svg>
+            <span class="ml-4 mb-4">Workouts</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5h6M5 9h14M5 15h14m-9 4h6"
+              ></path>
+            </svg>
+            <span class="ml-4 mb-4">Meal Plans</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 16h-1v-4h-1m1 4v-4m-1-4V6m5 12h-5v-4m0-4V6m2-2a6 6 0 100 12V5m1 6h5m-1 1h5m-4-2h5"
+              ></path>
+            </svg>
+            <span class="ml-4 mb-4">Progress</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8v4l3 3m-5 0h-6"
+              ></path>
+            </svg>
+            <span class="ml-4 mb-4">Community</span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4v16m8-8H4"
+              ></path>
+            </svg>
+            <span class="ml-4 mb-4">Settings</span>
+          </a>
+        </nav>
+      </div>
 
-        <!-- Exercise Database -->
-        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-          <h3 class="text-2xl font-semibold text-gray-700 mb-4">
-            Exercise Database
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Browse exercises by body part or fitness goal, with descriptions,
-            images, and videos for proper form.
-          </p>
-          <!-- Example categories -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-              <h4 class="font-semibold text-gray-800 mb-2">Upper Body</h4>
-              <img
-                src=""
-                alt="Upper Body Exercise"
-                class="w-full mb-2 rounded-lg"
-              />
-              <a href="#" class="text-blue-500 hover:underline"
-                >View Exercises</a
-              >
-            </div>
-            <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-              <h4 class="font-semibold text-gray-800 mb-2">Lower Body</h4>
-              <img
-                src=""
-                alt="Lower Body Exercise"
-                class="w-full mb-2 rounded-lg"
-              />
-              <a href="#" class="text-blue-500 hover:underline"
-                >View Exercises</a
-              >
-            </div>
-            <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-              <h4 class="font-semibold text-gray-800 mb-2">Core</h4>
-              <img src="" alt="Core Exercise" class="w-full mb-2 rounded-lg" />
-              <a href="#" class="text-blue-500 hover:underline"
-                >View Exercises</a
-              >
-            </div>
+      <!-- Log Out -->
+      <div>
+        <a
+          href="#"
+          class="flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-red-600"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6-8H4a2 2 0 00-2 2v12a2 2 0 002 2h9"
+            ></path>
+          </svg>
+          <span class="ml-4">Log Out</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="bg-gray-900 min-h-screen p-8">
+      <h1 class="text-4xl font-bold text-white mb-8">Dashboard</h1>
+
+      <div class="insights flex flex-row space-x-8 overflow-x-auto">
+        <!-- Overview of Fitness Progress Card -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-lg text-white flex-shrink-0 w-64"
+        >
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-semibold">Fitness Progress</h3>
+          </div>
+          <h1 class="text-3xl font-bold mb-4">calories burned</h1>
+          <div class="progress w-20 h-20 mx-auto relative">
+            <svg class="w-full h-full">
+              <circle
+                cx="38"
+                cy="38"
+                r="36"
+                class="text-gray-700 stroke-current"
+                stroke-width="4"
+                fill="none"
+              ></circle>
+            </svg>
           </div>
         </div>
 
-        <!-- Workout Suggestions -->
-        <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
-          <h3 class="text-2xl font-semibold text-gray-700 mb-4">
-            Workout Suggestions
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Get personalized workout suggestions based on your goals and past
-            activities.
-          </p>
-          Suggestion example
-          <!-- <div class="bg-gray-100 p-4 rounded-lg shadow-md">
-            <h4 class="font-semibold text-gray-800 mb-2">
-              Tuesday: Upper Body Strength
-            </h4>
-            <p class="text-gray-600">
-              Focus on upper body strength with exercises like push-ups,
-              dumbbell presses, and pull-ups.
-            </p>
-            <a href="#" class="text-blue-500 hover:underline">View Workout</a>
-          </div> -->
+        <!-- Recent Activities Card -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-lg text-white flex-shrink-0 w-64"
+        >
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-semibold">Recent Activities</h3>
+          </div>
+          <h1 class="text-3xl font-bold mb-4">3 Workouts</h1>
+          <ul class="text-gray-300 list-disc list-inside space-y-2">
+            <li>Run: 5km - 400 calories</li>
+            <li>Yoga: 30 min - 200 calories</li>
+            <li>Strength: 45 min - 350 calories</li>
+          </ul>
         </div>
 
-        <!-- Progress Tracking -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold text-gray-700 mb-4">
-            Progress Tracking
-          </h3>
-          <p class="text-gray-600 mb-4">
-            Track your workout progress over time, including calories burned,
-            muscle groups targeted, and personal records.
-          </p>
-          <!-- Placeholder for a progress chart -->
-          <!-- <div>
-            class="bg-gray-100 h-64 rounded-lg flex items-center justify-center"
-          >
-            <p class="text-gray-500">Progress Chart Coming Soon</p>
-          </div> -->
+        <!-- Meal Logs Card -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-lg text-white flex-shrink-0 w-64"
+        >
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-semibold">Meal Logs</h3>
+          </div>
+          <h1 class="text-3xl font-bold mb-4">1800 calories</h1>
+          <ul class="text-gray-300 list-disc list-inside space-y-2">
+            <li>Breakfast: 500 calories</li>
+            <li>Lunch: 700 calories</li>
+            <li>Dinner: 600 calories</li>
+          </ul>
+        </div>
+
+        <!-- Goal Completion Status Card -->
+        <div
+          class="bg-gray-800 p-6 rounded-lg shadow-lg text-white flex-shrink-0 w-64"
+        >
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-xl font-semibold">Goal Completion Status</h3>
+          </div>
+          <h1 class="text-3xl font-bold mb-4">80% Completed</h1>
+          <div class="progress w-20 h-20 mx-auto relative">
+            <svg class="w-full h-full">
+              <circle
+                cx="38"
+                cy="38"
+                r="36"
+                class="text-gray-700 stroke-current"
+                stroke-width="4"
+                fill="none"
+              ></circle>
+            </svg>
+          </div>
         </div>
       </div>
-    </section>
+    </main>
   </body>
 </html>
