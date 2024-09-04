@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           label: "Workout Minutes",
           data: [30, 45, 60, 70, 80, 90, 100],
-          backgroundColor: "rgba(75, 192, 192, 0.5)",
+          backgroundColor: "rgba(65, 192, 192, 0.5)",
           borderColor: "rgb(75, 192, 192)",
           borderWidth: 1,
         },
